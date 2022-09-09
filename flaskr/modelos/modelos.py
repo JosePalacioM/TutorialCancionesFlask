@@ -10,6 +10,9 @@ class Cancion(db.Model):
     segundos = db.Column(db.Integer)
     interprete = db.Column(db.String(128))
 
+    def __repr__(self):
+        return"{}-{}-{}-{}".format(self.titulo,self.minutos,self.segundos,self.interprete)
+
 class Medio(enum.Enum):
    DISCO = 1
    CASETE = 2
